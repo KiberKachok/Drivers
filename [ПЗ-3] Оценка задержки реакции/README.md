@@ -32,3 +32,11 @@ sudo ./main
 ```
 sudo rmmod response_analyzer.ko
 ```
+## Результаты
+### Обычный режим
+```
+./make
+Mean = 5282460.49
+Max = 10912608
+```
+![image](https://github.com/user-attachments/assets/59600e03-d671-49e5-9b30-7dbc8c0c9ab5)
