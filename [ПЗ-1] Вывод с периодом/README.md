@@ -30,3 +30,5 @@ root@DESKTOP-MG69BAQ:/lib/workspace/sleep_print# sudo rmmod sleep_print.ko
 ```
 root@DESKTOP-MG69BAQ:/lib/workspace/sleep_print# sudo dmesg
 ```
+### Скриншот
+![image](https://github.com/user-attachments/assets/b0aa89aa-f1b8-4674-89dd-23eceb84bcce)
