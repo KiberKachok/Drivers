@@ -22,17 +22,21 @@
   + Отключим выключение ОС после первого обнаружения: ```GRUB_DISABLE_OS_PROBER=false```
  
 Собранное ядро и модули:
+
 ![image](https://github.com/user-attachments/assets/0f2fde26-e462-449c-8f02-fa63dfc9ef81)
 
 Параметры GRUB2:
+
 ![image](https://github.com/user-attachments/assets/f5ffa14f-4792-417f-a18b-6932d994819c)
 
 Отображение операционных систем:
+
 ![image](https://github.com/user-attachments/assets/9426e481-6d26-4e82-ac35-6bb2e2b3a695)
 
 ### Вторичный тест
 
 Проведём аналогичный тест для операционной системы реального времени:
+
 ![image](https://github.com/user-attachments/assets/0811d6c7-72d5-426f-9205-c8f2cba8ad83)
 
 Как видно из результатов, разброс выполнения процессов во времени значительно уменьшился, а значит операционная система работает в штатном режиме.
