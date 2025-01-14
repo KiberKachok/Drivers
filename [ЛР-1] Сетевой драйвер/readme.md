@@ -31,3 +31,4 @@
 ![image](https://github.com/user-attachments/assets/1e525865-cfb8-4c7b-b4a3-87c4772acf14)
 
 Патч и исходный код прикреплены в репозитории.
+Изменения собраны с помощью makefile.
