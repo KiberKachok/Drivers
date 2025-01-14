@@ -1,0 +1,42 @@
+--- netvsc_drv.c	2025-01-14 02:59:20.466988672 +0300
++++ netvsc_drv2.c	2025-01-14 03:15:04.526993306 +0300
+@@ -67,6 +67,9 @@
+ 
+ static int netvsc_open(struct net_device *net)
+ {
++	//Device open log
++	pr_info("Device open...");
++
+ 	struct net_device_context *net_device_ctx = netdev_priv(net);
+ 	struct hv_device *device_obj = net_device_ctx->device_ctx;
+ 	int ret = 0;
+@@ -90,6 +93,9 @@
+ 
+ static int netvsc_close(struct net_device *net)
+ {
++	//Device close log
++	pr_info("Device close...")
++
+ 	struct net_device_context *net_device_ctx = netdev_priv(net);
+ 	struct hv_device *device_obj = net_device_ctx->device_ctx;
+ 	int ret;
+@@ -135,6 +141,9 @@
+ 	num_pages = skb_shinfo(skb)->nr_frags + 1 + 1;
+ 	if (num_pages > net_device_ctx->avail)
+ 		return NETDEV_TX_BUSY;
++	
++	//Packet memory place based on frags
++	pr_info("Packet arrived | inmem: %d", skb);
+ 
+ 	/* Allocate a netvsc packet based on # of frags. */
+ 	packet = kzalloc(sizeof(struct hv_netvsc_packet) +
+@@ -144,6 +153,9 @@
+ 		/* out of memory, silently drop packet */
+ 		netdev_err(net, "unable to allocate hv_netvsc_packet\n");
+ 
++		//Bad packet request – silent
++		pr_info("Packet silent: %d", packet)
++
+ 		dev_kfree_skb(skb);
+ 		net->stats.tx_dropped++;
+ 		return NETDEV_TX_OK;
